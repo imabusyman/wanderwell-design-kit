@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-travel.jpg";
+import TripTabView from "@/components/TripTabView";
 
 const Hero = () => {
   return (
@@ -37,18 +36,8 @@ const Hero = () => {
             Your perfect trip starts here.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Link to="/planner">
-              <Button size="lg" className="text-lg group">
-                Start Planning
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
-            <Link to="/dashboard">
-              <Button size="lg" variant="outline" className="text-lg">
-                View Demo
-              </Button>
-            </Link>
+          <div className="pt-8">
+            <TripTabView />
           </div>
 
           <div className="pt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
